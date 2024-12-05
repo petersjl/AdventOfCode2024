@@ -147,6 +147,10 @@ class Point {
   String toString() {
     return '${this.x}, ${this.y}';
   }
+
+  Point operator +(Point other) {
+    return new Point(this.x + other.x, this.y + other.y);
+  }
 }
 
 class Pair<T1, T2> extends Object {
