@@ -64,7 +64,7 @@ extension GenericListExtras<T> on List<T> {
     return list;
   }
 
-  List<T> listWhere(bool fun(element)) {
+  List<T> listWhere(bool fun(T element)) {
     List<T> list = [];
     for (T e in this) {
       if (fun(e)) list.add(e);
@@ -72,7 +72,7 @@ extension GenericListExtras<T> on List<T> {
     return list;
   }
 
-  int count(bool compare(element)) {
+  int count(bool compare(T element)) {
     int count = 0;
     this.forEach((element) {
       if (compare(element)) count++;
