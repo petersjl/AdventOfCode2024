@@ -53,16 +53,6 @@ extension GenericIterableExtras<T> on Iterable<T> {
     }
     return list;
   }
-}
-
-extension GenericListExtras<T> on List<T> {
-  List<Out> listMap<Out>(Out fun(T element)) {
-    List<Out> list = [];
-    for (T e in this) {
-      list.add(fun(e));
-    }
-    return list;
-  }
 
   List<T> listWhere(bool fun(T element)) {
     List<T> list = [];
