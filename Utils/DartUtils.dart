@@ -28,6 +28,20 @@ class Utils {
   static int ManhattanDist(Point first, Point second) {
     return (first.x - second.x).abs() + (first.y - second.y).abs();
   }
+
+  static List<int> ParseIntList(String line, {String separator = " "}) {
+    return line.split(separator).listMap((str) => int.parse(str));
+  }
+
+  static List<List<String>> getPointMap(
+      Iterable<Point> points, int mapHeight, int mapWidth) {
+    List<List<String>> map =
+        List.generate(mapHeight, (i) => List.generate(mapWidth, (j) => "."));
+    for (var point in points) {
+      map[point.y][point.x] = "#";
+    }
+    return map;
+  }
 }
 
 // Extensions
@@ -113,6 +127,12 @@ extension GenericMapExtras on Map<dynamic, dynamic> {
       if (test(entry.key, entry.value)) return entry.value;
     }
     return null;
+  }
+}
+
+extension MapOfListExtras<K, V> on Map<K, List<V>> {
+  List<V> appendToKey(K key, V value) {
+    return update(key, (ls) => ls..add(value), ifAbsent: () => [value]);
   }
 }
 
