@@ -8,6 +8,7 @@
 - Day 4: Ceres Search
 - Day 5: Print Queue
 - Day 6: Guard Gallivant
+- Day 7: Bridge Repair
 
 ## Times
 
@@ -21,3 +22,4 @@ Times are in seconds truncated at 3 decimal places
 | 04 | 0.011 | 0.004 | 0.003 | 0.019 |
 | 05 | 0.014 | 0.005 | 0.009 | 0.029 |
 | 06 | 0.019 | 0.01 | 31.754 | 31.784 |
+| 07 | 0.017 | 0.011 | 0.34 | 0.368 |
