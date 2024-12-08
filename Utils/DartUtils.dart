@@ -150,7 +150,7 @@ class Point {
   @override
   operator ==(Object other) {
     if (other is! Point) return false;
-    return hashCode == other.hashCode;
+    return x == other.x && y == other.y;
   }
 
   @override
@@ -160,6 +160,24 @@ class Point {
 
   Point operator +(Point other) {
     return new Point(this.x + other.x, this.y + other.y);
+  }
+
+  Point operator -(Point other) {
+    return new Point(this.x - other.x, this.y - other.y);
+  }
+
+  Point operator *(int scale) {
+    return new Point(x * scale, y * scale);
+  }
+
+  bool operator <(Point other) {
+    // Compares based on the magnitued of each point from (0,0)
+    return x.abs() + y.abs() < other.x.abs() + other.y.abs();
+  }
+
+  bool operator >(Point other) {
+    // Compares based on the magnitued of each point from (0,0)
+    return !(this < other);
   }
 }
 
