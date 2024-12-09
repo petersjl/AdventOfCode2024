@@ -89,15 +89,18 @@ String solvePart1(InputType input) {
 
 String solvePart2(InputType input) {
   var (guard, grid) = input;
-  var dir = new Point(0, -1);
+  var initDir = new Point(0, -1);
   int count = 0;
-  for (int row = 0; row < grid.length; row++) {
-    for (int col = 0; col < grid[0].length; col++) {
-      if (grid[row][col] != MapItem.NONE) continue;
-      grid[row][col] = MapItem.NEWOBS;
-      if (doesHeStay(guard, dir, grid)) count++;
-      grid[row][col] = MapItem.NONE;
-    }
+  Set<Pair<Point, Point>> path = {Pair(guard, initDir)};
+  doesHeStay(guard, initDir, grid, path: path);
+  Set<Point> possibilities = {};
+  path.forEach((spot) => possibilities.add(spot.first));
+  for (var pos in possibilities) {
+    if (grid[pos.y][pos.x] != MapItem.NONE) continue;
+
+    grid[pos.y][pos.x] = MapItem.NEWOBS;
+    if (doesHeStay(guard, initDir, grid)) count++;
+    grid[pos.y][pos.x] = MapItem.NONE;
   }
   return count.toString();
 }
