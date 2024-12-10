@@ -10,6 +10,7 @@
 - Day 6: Guard Gallivant
 - Day 7: Bridge Repair
 - Day 8: Resonant Collinearity
+- Day 9: Disk Fragmenter
 
 ## Times
 
@@ -25,3 +26,4 @@ Times are in seconds truncated at 3 decimal places
 | 06 | 0.013 | 0.01 | 7.568 | 7.591 |
 | 07 | 0.017 | 0.011 | 0.34 | 0.368 |
 | 08 | 0.012 | 0.003 | 0.002 | 0.018 |
+| 09 | 0.014 | 0.003 | 0.158 | 0.175 |
