@@ -11,6 +11,7 @@
 - Day 7: Bridge Repair
 - Day 8: Resonant Collinearity
 - Day 9: Disk Fragmenter
+- Day 10: Hoof It
 
 ## Times
 
@@ -27,3 +28,4 @@ Times are in seconds truncated at 3 decimal places
 | 07 | 0.017 | 0.011 | 0.34 | 0.368 |
 | 08 | 0.012 | 0.003 | 0.002 | 0.018 |
 | 09 | 0.014 | 0.003 | 0.158 | 0.175 |
+| 10 | 0.012 | 0.005 | 0.001 | 0.019 |
