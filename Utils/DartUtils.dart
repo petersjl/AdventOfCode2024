@@ -5,6 +5,13 @@ import 'dart:io' show File, Platform;
 
 // Random utilites methods
 class Utils {
+  static String timingString(Duration dur) {
+    if (dur.inMilliseconds != 0)
+      return '${dur.inSeconds}.${dur.inMilliseconds}s';
+    else
+      return '${dur.inMicroseconds}µs';
+  }
+
   static String to_abs_path(path, [base_dir = null]) {
     Path.Context context;
     if (Platform.isWindows) {

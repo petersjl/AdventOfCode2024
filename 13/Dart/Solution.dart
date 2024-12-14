@@ -11,18 +11,20 @@ void main() {
 
   Stopwatch stopwatch = new Stopwatch()..start();
   var input = parseInput(rawInput);
-  var timeParse = stopwatch.elapsedMilliseconds;
+  var timeParse = stopwatch.elapsed;
 
   if (runP1) solutionP1 = solvePart1(input);
-  var timeP1 = stopwatch.elapsedMilliseconds;
+  var timeP1 = stopwatch.elapsed;
   if (runP2) solutionP2 = solvePart2(input);
-  var timeP2 = stopwatch.elapsedMilliseconds;
+  var timeP2 = stopwatch.elapsed;
+  stopwatch.stop();
 
-  print('Parse time: ${timeParse * 1 / 1000}s');
+  print('Parse time: ${Utils.timingString(timeParse)}');
   if (runP1)
-    print('Part 1 (${(timeP1 - timeParse) * 1 / 1000}s): ${solutionP1}');
-  if (runP2) print('Part 2 (${(timeP2 - timeP1) * 1 / 1000}s): ${solutionP2}');
-  print('Ran in ${stopwatch.elapsedMilliseconds * 1 / 1000} seconds');
+    print('Part 1 (${Utils.timingString(timeP1 - timeParse)}): ${solutionP1}');
+  if (runP2)
+    print('Part 2 (${Utils.timingString(timeP2 - timeP1)}): ${solutionP2}');
+  print('Ran in ${Utils.timingString(timeP2)}');
 }
 
 typedef InputType = List<ClawMachine>;
