@@ -187,6 +187,13 @@ class Point {
     // Compares based on the magnitued of each point from (0,0)
     return !(this < other);
   }
+
+  /// Assert that this is within the box created by
+  /// origin inclusive and farCorner exclusive
+  bool isInBounds(Point farCorner, [Point? origin = null]) {
+    origin = origin ?? Point.origin;
+    return origin.x <= x && x < farCorner.x && origin.y <= y && y < farCorner.y;
+  }
 }
 
 class Pair<T1, T2> extends Object {
