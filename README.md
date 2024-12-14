@@ -2,17 +2,19 @@
 
 ## Calendar
 
-- Day 1: Historian Hysteria
-- Day 2: Red-Nosed Reports
-- Day 3: Mull It Over
-- Day 4: Ceres Search
-- Day 5: Print Queue
-- Day 6: Guard Gallivant
-- Day 7: Bridge Repair
-- Day 8: Resonant Collinearity
-- Day 9: Disk Fragmenter
-- Day 10: Hoof It
-- Day 11: Plutonian Pebbles
+- [Day 1: Historian Hysteria](https://adventofcode.com/2024/day/1)
+- [Day 2: Red-Nosed Reports](https://adventofcode.com/2024/day/2)
+- [Day 3: Mull It Over](https://adventofcode.com/2024/day/3)
+- [Day 4: Ceres Search](https://adventofcode.com/2024/day/4)
+- [Day 5: Print Queue](https://adventofcode.com/2024/day/5)
+- [Day 6: Guard Gallivant](https://adventofcode.com/2024/day/6)
+- [Day 7: Bridge Repair](https://adventofcode.com/2024/day/7)
+- [Day 8: Resonant Collinearity](https://adventofcode.com/2024/day/8)
+- [Day 9: Disk Fragmenter](https://adventofcode.com/2024/day/9)
+- [Day 10: Hoof It](https://adventofcode.com/2024/day/10)
+- [Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11)
+- [Day 12: Garden Groups](https://adventofcode.com/2024/day/12)
+- [Day 13: Claw Contraption](https://adventofcode.com/2024/day/13)
 
 ## Times
 
@@ -31,3 +33,4 @@ Times are in seconds truncated at 3 decimal places
 | 09 | 0.014 | 0.003 | 0.158 | 0.175 |
 | 10 | 0.012 | 0.005 | 0.001 | 0.019 |
 | 11 | 0.01 | 0.009 | 0.026 | 0.045 |
+| 13 | 0.001 | 0.001 | 0.0 | 0.005 |
