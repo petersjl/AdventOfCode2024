@@ -138,6 +138,12 @@ extension MapOfListExtras<K, V> on Map<K, List<V>> {
 
 // Classes
 class Point {
+  static Point origin = Point(0, 0);
+  static Point up = Point(0, -1);
+  static Point down = Point(0, 1);
+  static Point left = Point(-1, 0);
+  static Point right = Point(1, 0);
+
   int x, y;
   Point(this.x, this.y);
   Point.clone(Point other)
