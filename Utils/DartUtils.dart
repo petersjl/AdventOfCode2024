@@ -145,7 +145,9 @@ class Point {
         y = other.y;
 
   @override
-  int get hashCode => '${x},${y}'.hashCode;
+  // https://en.wikipedia.org/wiki/Pairing_function#Cantor_pairing_function
+  // Has a low chance of clashing
+  int get hashCode => ((x + y) * (x + y + 1) ~/ 2 + y);
 
   @override
   operator ==(Object other) {
