@@ -54,6 +54,10 @@ extension StringExtras on String {
     return this.split('\r\n');
   }
 
+  List<String> splitDoubleNewLine() {
+    return this.split('${Platform.lineTerminator}${Platform.lineTerminator}');
+  }
+
   List<String> splitWhitespace() {
     return this.split(new RegExp('\\s+'));
   }
