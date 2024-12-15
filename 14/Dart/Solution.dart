@@ -1,7 +1,5 @@
 // ignore_for_file: dead_code
 
-import 'package:test/expect.dart';
-
 import '../../Utils/DartUtils.dart';
 
 void main() {
