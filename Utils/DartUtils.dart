@@ -6,8 +6,10 @@ import 'dart:io' show File, Platform;
 // Random utilites methods
 class Utils {
   static String timingString(Duration dur) {
-    if (dur.inMilliseconds != 0)
-      return '${dur.inSeconds}.${dur.inMilliseconds}s';
+    if (dur.inSeconds != 0)
+      return '${dur.inSeconds}.${dur.inMilliseconds.toString().padLeft(3, '0')}s';
+    else if (dur.inMilliseconds != 0)
+      return '${dur.inMilliseconds}ms';
     else
       return '${dur.inMicroseconds}µs';
   }
@@ -48,6 +50,11 @@ class Utils {
       map[point.y][point.x] = "#";
     }
     return map;
+  }
+
+  static List<List<T>> getGrid<T>(T fill, int height, [int? width]) {
+    width = width ?? height;
+    return List.generate(height, (_) => List.generate(width!, (_) => fill));
   }
 }
 
@@ -109,11 +116,12 @@ extension GenericIterableExtras<T> on Iterable<T> {
 
 extension ListExtras on List<List<dynamic>> {
   void printFlat([String formatter(dynamic element) = _toString]) {
+    StringBuffer s = StringBuffer();
     for (var list in this) {
-      StringBuffer s = StringBuffer();
       list.forEach((element) => s.write(formatter(element)));
-      print(s.toString());
+      s.write('\n');
     }
+    print(s.toString());
   }
 }
 
@@ -154,6 +162,7 @@ class Point {
   static Point down = Point(0, 1);
   static Point left = Point(-1, 0);
   static Point right = Point(1, 0);
+  static List<Point> directions = [up, down, left, right];
 
   int x, y;
   Point(this.x, this.y);
@@ -199,6 +208,10 @@ class Point {
     return !(this < other);
   }
 
+  // Should only be used on direcitons
+  Point rotateClockwise() => Point(-this.y, this.x);
+  Point rotateCounterClockwise() => Point(this.y, -this.x);
+
   /// Assert that this is within the box created by
   /// origin inclusive and farCorner exclusive
   bool isInBounds(Point farCorner, [Point? origin = null]) {
@@ -243,13 +256,14 @@ class PriorityQueue<T> {
   int get length => _size;
   bool get isEmpty => _size == 0;
 
-  PriorityQueue(int fun(T queueItem, T toInsert))
-      : _comparator = fun,
+  PriorityQueue(int comparator(T queueItem, T toInsert))
+      : _comparator = comparator,
         _array = [];
 
   void enqueue(T object) {
     for (int i = 0; i < _array.length; ++i) {
       T thing = _array[i];
+      // 0 < thing.value - object.value
       if (0 < _comparator(thing, object)) {
         _array.insert(i, object);
         _size++;
