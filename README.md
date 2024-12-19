@@ -15,6 +15,11 @@
 - [Day 11: Plutonian Pebbles](https://adventofcode.com/2024/day/11)
 - [Day 12: Garden Groups](https://adventofcode.com/2024/day/12)
 - [Day 13: Claw Contraption](https://adventofcode.com/2024/day/13)
+- [Day 14: Restroom Redoubt](https://adventofcode.com/2024/day/14)
+- [Day 15: Warehouse Woes](https://adventofcode.com/2024/day/15)
+- [Day 16: Reindeer Maze](https://adventofcode.com/2024/day/16)
+- [Day 17: Chronospatial Computer](https://adventofcode.com/2024/day/17)
+- [Day 18: RAM Run](https://adventofcode.com/2024/day/18)
 
 ## Times
 
@@ -33,4 +38,10 @@ Times are in seconds truncated at 3 decimal places
 | 09 | 0.014 | 0.003 | 0.158 | 0.175 |
 | 10 | 0.012 | 0.005 | 0.001 | 0.019 |
 | 11 | 0.01 | 0.009 | 0.026 | 0.045 |
+| 12 | na | na | na | na |
 | 13 | 0.001 | 0.001 | 0.0 | 0.005 |
+| 14 | 3ms | 2ms | 153ms | 159ms |
+| 15 | na | na | na | na |
+| 16 | na | na | na | na |
+| 17 | na | na | na | na |
+| 18 | 4ms | 16ms | 60ms | 81ms |
