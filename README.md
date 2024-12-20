@@ -20,6 +20,7 @@
 - [Day 16: Reindeer Maze](https://adventofcode.com/2024/day/16)
 - [Day 17: Chronospatial Computer](https://adventofcode.com/2024/day/17)
 - [Day 18: RAM Run](https://adventofcode.com/2024/day/18)
+- [Day 19: Linen Layout](https://adventofcode.com/2024/day/18)
 
 ## Times
 
@@ -45,3 +46,4 @@ Times are in seconds truncated at 3 decimal places
 | 16 | na | na | na | na |
 | 17 | na | na | na | na |
 | 18 | 4ms | 16ms | 60ms | 81ms |
+| 19 | 2ms | 32ms | 26ms | 61ms |

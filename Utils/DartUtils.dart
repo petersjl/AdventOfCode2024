@@ -275,6 +275,10 @@ class PriorityQueue<T> {
     return;
   }
 
+  void enqueueAll(List<T> items) {
+    for (var item in items) enqueue(item);
+  }
+
   T dequeue() {
     _size--;
     return _array.removeAt(0);
@@ -324,6 +328,10 @@ class Stack<T> {
       _top = node;
     }
     _size++;
+  }
+
+  void pushAll(List<T> items) {
+    for (var item in items) push(item);
   }
 
   void pushBottom(T item) {
@@ -402,6 +410,10 @@ class Queue<T> {
       _start = node;
     }
     _size++;
+  }
+
+  void pushAll(List<T> items) {
+    for (var item in items) push(item);
   }
 
   void pushEnd(T item) {
