@@ -56,6 +56,14 @@ class Utils {
     width = width ?? height;
     return List.generate(height, (_) => List.generate(width!, (_) => fill));
   }
+
+  static List<List<T>> cloneGrid<T>(List<List<T>> orig) {
+    var clone = getGrid(orig[0][0], orig.length, orig[0].length);
+    for (int row = 0; row < orig.length; row++)
+      for (int col = 0; col < orig[0].length; col++)
+        clone[row][col] = orig[row][col];
+    return clone;
+  }
 }
 
 // Extensions
